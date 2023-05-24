@@ -5,11 +5,37 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 h1 {
     text-align: center;
 }
-#input, #output{
+#input{
     text-align: right;
     padding: 30px;
     background-color: lightgray;
-    border-radius: 50px;
+    border-radius: 50px 50px 0px 0px;
+}
+#output{
+    text-align: left;
+    padding: 30px;
+    background-color: lightgray;
+    border-radius: 0px 0px 50px 50px;
+}
+.subcontainer{
+    position: relative;
+    text-align: center;
+}
+.overlay1{
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    color: rgba(0,0,0,0.4);
+}
+.overlay2{
+    position: absolute;
+    top: 8px;
+    left: 1000px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    color: rgba(0,0,0,0.4);
 }
 .separator{
     color: rgba(0,0,0,0);
