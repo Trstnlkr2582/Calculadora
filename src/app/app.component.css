@@ -5,7 +5,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 h1 {
     text-align: center;
 }
-#input{
+#input, #output{
     text-align: right;
     padding: 30px;
     background-color: lightgray;
