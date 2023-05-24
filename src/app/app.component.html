@@ -1,3 +1,6 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <div class="container">
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
   <div class="row">
@@ -19,37 +22,56 @@
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
   <div class="row">
     <div class="col-3"><button style="color: white; background-color: red;">C</button></div>
-    <div class="col-3"><button>%</button></div>
-    <div class="col-3"><button>+/-</button></div>
-    <div class="col-3"><button>/</button></div>
+    <div class="col-3"><button class="other">%</button></div>
+    <div class="col-3"><button class="other">+/-</button></div>
+    <div class="col-3"><button class="other">/</button></div>
   </div>
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
   <div class="row">
-    <div class="col-3"><button>1</button></div>
-    <div class="col-3"><button>2</button></div>
-    <div class="col-3"><button>3</button></div>
-    <div class="col-3"><button>*</button></div>
+    <div class="col-3"><button class="num">1</button></div>
+    <div class="col-3"><button class="num">2</button></div>
+    <div class="col-3"><button class="num">3</button></div>
+    <div class="col-3"><button class="other">*</button></div>
   </div>
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
   <div class="row">
-    <div class="col-3"><button>4</button></div>
-    <div class="col-3"><button>5</button></div>
-    <div class="col-3"><button>6</button></div>
-    <div class="col-3"><button>-</button></div>
+    <div class="col-3"><button class="num">4</button></div>
+    <div class="col-3"><button class="num">5</button></div>
+    <div class="col-3"><button class="num">6</button></div>
+    <div class="col-3"><button class="other">-</button></div>
   </div>
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
   <div class="row">
-    <div class="col-3"><button>7</button></div>
-    <div class="col-3"><button>8</button></div>
-    <div class="col-3"><button>9</button></div>
-    <div class="col-3"><button>+</button></div>
+    <div class="col-3"><button class="num">7</button></div>
+    <div class="col-3"><button class="num">8</button></div>
+    <div class="col-3"><button class="num">9</button></div>
+    <div class="col-3"><button class="other">+</button></div>
   </div>
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
   <div class="row">
-    <div class="col-3"><button>.</button></div>
-    <div class="col-3"><button>0</button></div>
-    <div class="col-3"><button>...</button></div>
-    <div class="col-3"><button>=</button></div>
+    <div class="col-3"><button class="other">.</button></div>
+    <div class="col-3"><button class="num">0</button></div>
+    <div class="col-3"><button class="more" (click)="show()">...</button></div>
+    <div class="col-3"><button class="other">=</button></div>
   </div>
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
+  <ng-template [ngIf]="showMore">
+    <div class="row">
+      <div class="col-4"><button class="more">Sen()</button></div>
+      <div class="col-4"><button class="more">Cos()</button></div>
+      <div class="col-4"><button class="more">Tan()</button></div>
+    </div>
+    <div class="row" style="color: rgba(0,0,0,0);">___</div>
+    <div class="row">
+      <div class="col-4"><button class="more">Arcsen()</button></div>
+      <div class="col-4"><button class="more">Arccos()</button></div>
+      <div class="col-4"><button class="more">Arctan()</button></div>
+    </div>
+    <div class="row" style="color: rgba(0,0,0,0);">___</div>
+    <div class="row">
+      <div class="col-6"><button class="more"></button></div>
+      <div class="col-6"><button class="more">2</button></div>
+    </div>
+    <div class="row" style="color: rgba(0,0,0,0);">___</div>
+  </ng-template>
 </div>

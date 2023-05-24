@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Calculadora';
+  showMore :boolean = false
+  show(): void{
+    this.showMore = !this.showMore
+  }
 }

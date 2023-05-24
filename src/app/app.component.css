@@ -12,7 +12,10 @@ h1 {
     border-radius: 50px 50px 0px 0px;
 }
 #output{
-    text-align: left;
+    text-align: right;
+    @media (min-width: 1000px) {
+        text-align: left;
+    }
     padding: 30px;
     background-color: lightgray;
     border-radius: 0px 0px 50px 50px;
@@ -32,7 +35,10 @@ h1 {
 .overlay2{
     position: absolute;
     top: 8px;
-    left: 1000px;
+    left: 40px;
+    @media (min-width: 1000px) {
+        left: 88%;
+    }
     font-family: "Josefin Sans", sans-serif;
     font-size: 25px;
     color: rgba(0,0,0,0.4);
@@ -43,11 +49,23 @@ h1 {
 .col-3{
     text-align: center;
 }
+.other {
+    background-color: blue;
+    color: white;
+}
+.more {
+    background-color: rgb(212, 212, 0);
+}
+.num {
+    background-color: darkgray;
+}
+.add{
+    background-color: darkgray;
+}
 button{
     font-family: "Josefin Sans", sans-serif;
     font-size: larger;
     width: 100%;
     padding: 16px;
-    background-color: darkgray;
     border-radius: 50px;
 }
