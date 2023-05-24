@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+}
+#input{
+    text-align: right;
+    padding: 30px;
+    background-color: lightgray;
+    border-radius: 50px;
+}
