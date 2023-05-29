@@ -187,12 +187,20 @@ export class AppComponent implements OnInit{
   }
   putDot(): void{
     if(this.op!=")"){
-      if (document.getElementById("pan1")!.innerHTML == "0" && !this.containsSpecialChars(this.a)){
-        this.a = "0."
+      if (document.getElementById("pan1")!.innerHTML == "0"){
+        if (this.op != "" && !this.containsSpecialChars(this.b)) {
+          this.b += "0."
+        }
+        else if(!this.containsSpecialChars(this.a)){
+          this.a += "0."
+        }
       }
-      else {
+      else{
         if (this.op != "" && !this.containsSpecialChars(this.b)) {
           this.b += "."
+        }
+        else if(!this.containsSpecialChars(this.a)){
+          this.a += "."
         }
       }
     }
