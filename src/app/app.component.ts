@@ -79,6 +79,9 @@ export class AppComponent implements OnInit{
       }
       this.test = this.a
     }
+    if(this.containsSpecialChars(this.display)){
+      this.piTransform()
+    }
     if(this.porci == "%"){
       this.calc = parseFloat(this.b)/100*parseFloat(this.a)
       this.b = ""+this.calc
@@ -149,9 +152,30 @@ export class AppComponent implements OnInit{
       }
       else{
         this.a = this.a.replaceAll("π","")
+        if(this.a==""){
+          this.a = ""+1
+        }
         this.calc = parseFloat(this.a)*Math.PI
         this.a = ""+this.calc
       }
+    }
+  }
+  piTransform(): void{
+    if(this.containsSpecialChars(this.a)){
+      this.a = this.a.replaceAll("π","")
+        if(this.a==""){
+          this.a = ""+1
+        }
+        this.calc = parseFloat(this.a)*Math.PI
+        this.a = ""+this.calc
+    }
+    if(this.containsSpecialChars(this.b)){
+      this.b = this.b.replaceAll("π","")
+        if(this.b==""){
+          this.b = ""+1
+        }
+        this.calc = parseFloat(this.b)*Math.PI
+        this.b = ""+this.calc
     }
   }
   putTrig(trig: String): void{
