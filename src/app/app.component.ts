@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
   exp = "$X^{Y}$"
   porci = ""
   calc = 0
-  selTrig = 0
   op :String = ""
   neg :String = ""
   trig: String = ""
@@ -69,13 +68,13 @@ export class AppComponent implements OnInit{
         this.dgToRad()
         this.c = (Number)(Math.tan(parseFloat(this.a)).toFixed(4))
       }
-      else if(this.trig="Arcsen("){
+      else if(this.trig=="Arcsen("){
         this.c = (Number)(Math.asin(parseFloat(this.a)).toFixed(4))
       }
-      else if(this.trig="Arccos("){
+      else if(this.trig=="Arccos("){
         this.c = (Number)(Math.acos(-1).toFixed(4))
       }
-      else if(this.trig="Arctan("){
+      else if(this.trig=="Arctan("){
         this.c = (Number)(Math.atan(parseFloat(this.a)).toFixed(4))
       }
       this.test = this.a
