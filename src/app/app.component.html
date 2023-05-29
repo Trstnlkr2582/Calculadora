@@ -54,25 +54,21 @@
   <div class="row" style="color: rgba(0,0,0,0);">___</div>
   <ng-template [ngIf]="showMore">
     <div class="row">
-      <div class="col-4"><button class="more">Sen()</button></div>
-      <div class="col-4"><button class="more">Cos()</button></div>
-      <div class="col-4"><button class="more">Tan()</button></div>
+      <div class="col-4"><button class="more" (click)="putTrig('Sen(')">Sen()</button></div>
+      <div class="col-4"><button class="more" (click)="putTrig('Cos(')">Cos()</button></div>
+      <div class="col-4"><button class="more" (click)="putTrig('Tan(')">Tan()</button></div>
     </div>
     <div class="row" style="color: rgba(0,0,0,0);">___</div>
     <div class="row">
-      <div class="col-4"><button class="more">Arcsen()</button></div>
-      <div class="col-4"><button class="more">Arccos()</button></div>
-      <div class="col-4"><button class="more">Arctan()</button></div>
+      <div class="col-4"><button class="more" (click)="putTrig('Arcsen(')">Arcsen()</button></div>
+      <div class="col-4"><button class="more" (click)="putTrig('Arccos(')">Arccos()</button></div>
+      <div class="col-4"><button class="more" (click)="putTrig('Arctan(')">Arctan()</button></div>
     </div>
     <div class="row" style="color: rgba(0,0,0,0);">___</div>
     <div class="row">
-      <div class="col-6"><button class="more" [mathjax]="ans"></button></div>
-      <div class="col-6"><button class="more" [mathjax]="exp"></button></div>
-    </div>
-    <div class="row" style="color: rgba(0,0,0,0);">___</div>
-    <div class="row">
-      <div class="col-6"><button class="more">(</button></div>
-      <div class="col-6"><button class="more">)</button></div>S
+      <div class="col-4"><button class="more" [mathjax]="ans" (click)="ansM()"></button></div>
+      <div class="col-4"><button class="more" [mathjax]="exp" (click)="expC()"></button></div>
+      <div class="col-4"><button class="more" (click)="pi()">Pi</button></div>
     </div>
     <div class="row" style="color: rgba(0,0,0,0);">___</div>
   </ng-template>
