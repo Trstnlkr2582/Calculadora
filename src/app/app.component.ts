@@ -23,6 +23,7 @@ export class AppComponent implements OnInit{
   op :String = ""
   neg :String = ""
   trig: String = ""
+  Historial: string[] = [];
   ansM(): void{
     this.c= 1/this.c
     this.res = ""+this.c
@@ -113,6 +114,7 @@ export class AppComponent implements OnInit{
     this.porci = ""
     this.res = ""+this.c
     document.getElementById("pan2")!.innerHTML = this.res
+    this.addToHistory((this.display+" = "+this.c));
   }
   ope(opi:string): void{
     if (this.op != ")"){
@@ -260,5 +262,12 @@ export class AppComponent implements OnInit{
   }
   show(): void{
     this.showMore = !this.showMore
+  }
+  public clearHistory(index: number): void {
+    this.Historial.splice(index, 1);
+  }
+ 
+  public addToHistory(item: string): void {
+    this.Historial.push(item);
   }
 }

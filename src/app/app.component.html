@@ -72,4 +72,14 @@
     </div>
     <div class="row" style="color: rgba(0,0,0,0);">___</div>
   </ng-template>
+  <div class="row">
+    <div class="subcontainer">
+      <div class="col-12" id="input">
+        <h5 style="text-align: left;">Historial >></h5>
+        <li *ngFor="let item of Historial; let i = index">{{ item }}     
+          <button style="text-align:center" class="fa fa-trash-o" aria-hidden="true" (click)="clearHistory(i)">clear</button>
+        </li>
+      </div>
+    </div>
+  </div>
 </div>
